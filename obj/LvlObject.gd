@@ -1,8 +1,8 @@
 extends Node2D
 class_name LvlObject
 
-const BLOCK_WIDTH = 60;
-const BLOCK_HEIGHT = 60;
+const BLOCK_WIDTH = 30;
+const BLOCK_HEIGHT = 30;
 
 func get_xi() -> int:
 	return floor(position.x / BLOCK_WIDTH) as int;

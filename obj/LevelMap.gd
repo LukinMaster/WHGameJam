@@ -32,7 +32,7 @@ func register_at_position(x : int, y : int, obj : LvlObject):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	clear_level(1920/60, 1080/60)
+	clear_level(1920/30, 1080/30)
 	pass # Replace with function body.
 
 

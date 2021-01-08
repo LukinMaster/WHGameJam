@@ -13,8 +13,8 @@ signal Death;
 var xPos : int = 0;
 var yPos : int = 0;
 
-const BLOCK_WIDTH = 60;
-const BLOCK_HEIGHT = 60;
+const BLOCK_WIDTH = 30;
+const BLOCK_HEIGHT = 30;
 
 const SPEED : float = 200.0
 
