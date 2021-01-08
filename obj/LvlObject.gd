@@ -1,5 +1,5 @@
 extends Node2D
-
+class_name LvlObject
 
 const BLOCK_WIDTH = 60;
 const BLOCK_HEIGHT = 60;
@@ -10,11 +10,20 @@ func get_xi() -> int:
 func get_yi() -> int:
 	return floor(position.y / BLOCK_HEIGHT) as int;
 
-func destroy_by_bomb():
-	pass
+# returns true, if it was destroyed
+func destroy_by_bomb() -> bool:
+	return false
+
+func is_solid() -> bool:
+	return true
+
+func register():
+	var lvlMap = get_node("/root/LevelMap");
+	lvlMap.register_at_position(get_xi(), get_yi(), self)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	register()
 	pass # Replace with function body.
 
 

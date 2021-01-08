@@ -4,13 +4,17 @@
 [ext_resource path="res://obj/Player.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 60, 60 )
 
-[node name="Player" type="Node2D"]
+[node name="Player" type="KinematicBody2D" groups=[
+"player",
+]]
 script = ExtResource( 2 )
 
 [node name="KinematicBody2D" type="CollisionShape2D" parent="."]
+position = Vector2( 60, 60 )
 shape = SubResource( 1 )
 
-[node name="icon" type="Sprite" parent="KinematicBody2D"]
-position = Vector2( 32.5192, 31.1662 )
+[node name="icon" type="Sprite" parent="."]
+position = Vector2( 60, 60 )
 texture = ExtResource( 1 )

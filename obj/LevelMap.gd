@@ -5,7 +5,7 @@ extends Node
 # var a = 2
 # var b = "text"
 
-var map : Array = [];
+var map : Array = [[null]];
 
 func clear_level(width : int, height : int):
 	map.clear()
@@ -14,10 +14,25 @@ func clear_level(width : int, height : int):
 		tmp.resize(width)
 		map.append(tmp)
 
-
+func get_at_position(x : int, y : int):
+	if (x < 0 || y < 0 || y >= map.size()):
+		return null
+	if x <= map[y].size():
+		return null
+		
+	return map[y][x]
+	
+func register_at_position(x : int, y : int, obj : LvlObject):
+	if (x < 0 || y < 0 || y >= map.size()):
+		return
+	if x <= map[y].size():
+		return
+		
+	map[y][x] = obj
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	clear_level(1920/60, 1080/60)
 	pass # Replace with function body.
 
 
