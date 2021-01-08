@@ -8,20 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "Node2D",
-"class": "LvlObject",
-"language": "GDScript",
-"path": "res://obj/LvlObject.gd"
-} ]
+_global_script_classes=[  ]
 _global_script_class_icons={
-"LvlObject": ""
+
 }
 
 [application]
 
 config/name="Floating Potatoes"
-run/main_scene="res://TestLevel.tscn"
 config/icon="res://gfx/icon.png"
 
 [autoload]
