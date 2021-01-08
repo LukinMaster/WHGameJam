@@ -1,14 +1,11 @@
 extends Node2D
 class_name LvlObject
 
-const BLOCK_WIDTH = 30;
-const BLOCK_HEIGHT = 30;
-
 func get_xi() -> int:
-	return floor(position.x / BLOCK_WIDTH) as int;
+	return floor(position.x / Globals.BLOCK_WIDTH) as int;
 	
 func get_yi() -> int:
-	return floor(position.y / BLOCK_HEIGHT) as int;
+	return floor(position.y / Globals.BLOCK_HEIGHT) as int;
 
 # returns true, if it was destroyed
 func destroy_by_bomb() -> bool:

@@ -5,28 +5,23 @@ extends KinematicBody2D
 # var a = 2
 # var b = "text"
 
-
-
 signal Finish;
 signal Death;
 
 var xPos : int = 0;
 var yPos : int = 0;
 
-const BLOCK_WIDTH = 30;
-const BLOCK_HEIGHT = 30;
-
 const SPEED : float = 200.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	xPos = floor(position.x / BLOCK_WIDTH) as int;
-	yPos = floor(position.x / BLOCK_WIDTH) as int;
+	xPos = floor(position.x / Globals.BLOCK_WIDTH) as int;
+	yPos = floor(position.x / Globals.BLOCK_WIDTH) as int;
 	pass # Replace with function body.
 
 func _process(delta):
 	var deltaSpeed = SPEED*delta 
-	var desiredPosition  = Vector2(xPos*BLOCK_WIDTH, yPos*BLOCK_HEIGHT)
+	var desiredPosition  = Vector2(xPos*Globals.BLOCK_WIDTH, yPos*Globals.BLOCK_HEIGHT)
 	
 	# X
 	if (position.x < desiredPosition.x):
@@ -44,10 +39,10 @@ func _process(delta):
 		
 	# Align
 	if (abs(position.x - desiredPosition.x) < deltaSpeed):
-		position.x = xPos * BLOCK_WIDTH
+		position.x = xPos * Globals.BLOCK_WIDTH
 
 	if (abs(position.y - desiredPosition.y) < deltaSpeed):
-		position.y = yPos * BLOCK_WIDTH
+		position.y = yPos * Globals.BLOCK_WIDTH
 			
 	# Move to next location
 	

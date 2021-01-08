@@ -21,6 +21,7 @@ config/icon="res://gfx/icon.png"
 [autoload]
 
 LevelMap="*res://obj/LevelMap.gd"
+Globals="*res://Globals.gd"
 
 [display]
 
